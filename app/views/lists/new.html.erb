@@ -1,0 +1,12 @@
+<% content_for :title, "New List" %>
+<div class="form-card">
+  <h1>New List</h1>
+
+  <%= render "form", list: @list %>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to list", lists_path %>
+  </div>
+</div>

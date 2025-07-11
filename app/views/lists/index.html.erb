@@ -1,0 +1,38 @@
+<% content_for :title, "Lists" %>
+
+<div class="container py-4">
+  <div class="d-flex gap-5 justify-content-end align-items-end">
+      <%= link_to image_tag('logo_popcorn.svg', alt: '+'), new_list_path %>
+      <%= link_to "Lists", new_list_path %>
+      <%= link_to image_tag('plus_symbol.svg', alt: '+'), new_list_path %>
+  </div>
+</div>
+
+  <div class="logo d-flex align-items-center justify-content-center">
+    <div class="text-center">
+      <h1>Save any kind of movie</h1>
+      <h3>Classic</h3>
+    </div>
+  </div>
+
+<div class="my_lists text-center my-5">
+    <h3>MY LISTS</h3>
+</div>
+
+<div class="d-flex gap-4 flex-wrap justify-content-center px-4">
+  <% @lists.each do |list| %>
+    <% first_movie = list.bookmarks.first&.movie %>
+    <div class="movie-card rounded">
+      <div class="movie-card-title text-white text-center">
+        <%= list.name %>
+      </div>
+    </div>
+  <% end %>
+
+  <!-- Add new list card -->
+  <div class="movie-card add-card rounded d-flex justify-content-center align-items-center">
+    <%= link_to new_list_path, class: "d-flex justify-content-center align-items-center w-100 h-100" do %>
+      <%= image_tag 'plus_symbol.svg', alt: '+', class: 'plus-icon' %>
+    <% end %>
+  </div>
+</div>

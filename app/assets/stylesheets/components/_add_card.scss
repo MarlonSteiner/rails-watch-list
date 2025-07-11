@@ -1,0 +1,19 @@
+.add-card {
+  position: absolute;
+  right: 10vw;
+  width: 150px;
+  height: 10vh;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.add-card:hover {
+  background-color: #3a3a3a;
+}
+
+.plus-icon {
+  width: 36px;
+  height: 36px;
+}
